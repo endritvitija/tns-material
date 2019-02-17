@@ -1,0 +1,29 @@
+{
+  "name": "tns-material",
+  "version": "1.0.4",
+  "description": "NativeScript Float Text Field ",
+  "nativescript": {
+    "platforms": {
+      "android": "5.0.1",
+      "ios": "5.0.1"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/endritvitija/tns-material.git"
+  },
+  "author": "Endrit Vitija",
+  "license": "MIT",
+  "private": false,
+  "peerDependencies": {
+    "@angular/core": ">=6.0.0",
+    "@angular/common": ">=6.0.0"
+  },
+  "ngPackage": {
+    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+    "lib": {
+      "entryFile": "src/public_api.ts"
+    },
+    "dest": "../dist/"
+  }
+}
