@@ -2,6 +2,11 @@
 
 MaterialUi for Nativescript Angular
 
+## Screenshot
+
+![Alt text](./img/gif.mp4 "Optional Title")
+![Alt text](./img/gif2.mp4 "Optional Title")
+
 ## Installation
 
 Run the following command from the root of your project:
@@ -24,19 +29,25 @@ There is no additional configuration needed!
 
 ## API
 
-#### Events
+### Events
 
-##### hint
+##### - hint
 
-###### focusColor
+##### - focusColor
 
-###### noFocusColor
+##### - noFocusColor
 
-###### secure
+##### - secure
 
-###### keyboardType
+##### - keyboardType
 
-###### style
+##### - style
+
+### Two way binding
+
+##### - [(model)]
+
+##### - (messageChange)
 
 # Usage
 
@@ -45,7 +56,9 @@ You need to add `bash FloatTextFieldModule` to your page module, and then simply
 ```python
 
 <FloatTextField hint="EMAIL" focusColor="#4286f4"></FloatTextField>
-<FloatTextField hint="EMAIL" focusColor="#4286f4" secure="true"></FloatTextField>
+<FloatTextField hint="PASSWORD" focusColor="#4286f4" secure="true"></FloatTextField>
+
+<FloatTextField [(model)]="name" (messageChange)="name=\$event"></FloatTextField>
 
 ```
 
