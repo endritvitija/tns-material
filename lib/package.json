@@ -1,6 +1,6 @@
 {
   "name": "tns-material",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "NativeScript Float Text Field ",
   "nativescript": {
     "platforms": {
@@ -12,6 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/endritvitija/tns-material.git"
   },
+  "keywords": [
+    "npm",
+    "tns-material",
+    "Material UI"
+  ],
   "author": "Endrit Vitija",
   "license": "MIT",
   "private": false,
