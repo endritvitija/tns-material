@@ -44,7 +44,7 @@ You need to add ```FloatTextFieldModule ``` to your page module, and then simply
 <FloatTextField hint="EMAIL" focusColor="#4286f4"></FloatTextField>
 <FloatTextField hint="EMAIL" focusColor="#4286f4" secure="true"></FloatTextField>
 
-<FloatTextField [(model)]="name" (messageChange)="name=\$event"></FloatTextField>
+<FloatTextField [(model)]="name" (messageChange)="name=$event"></FloatTextField>
 
 ```
 * #### Import FloatTextFieldModule in NgModule:
