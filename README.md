@@ -5,7 +5,7 @@ MaterialUi for Nativescript Angular
 
 ## Screenshot
 
-<a href="https://imgflip.com/gif/2u1t2j"><img src="https://i.imgflip.com/2u1t2j.gif" title="made at imgflip.com"/></a>
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/20324575/53016560-2dae4580-344e-11e9-87d5-34002fd17c55.gif)
 
 ## Installation
 
