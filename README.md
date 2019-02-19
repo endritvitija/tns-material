@@ -3,6 +3,10 @@
 
 MaterialUi for Nativescript Angular
 
+## Screenshot
+
+<a href="https://imgflip.com/gif/2u1t2j"><img src="https://i.imgflip.com/2u1t2j.gif" title="made at imgflip.com"/></a>
+
 ## Installation
 
 Run the following command from the root of your project:
@@ -33,9 +37,9 @@ There is no additional configuration needed!
 
 # Usage
 
-You need to add ```bash FloatTextFieldModule ``` to your page module, and then simply use ```bash <FloatTextField></FloatTextField>```
+You need to add ```FloatTextFieldModule ``` to your page module, and then simply use ``` <FloatTextField></FloatTextField>```
 
-```python
+```Html
 
 <FloatTextField hint="EMAIL" focusColor="#4286f4"></FloatTextField>
 <FloatTextField hint="EMAIL" focusColor="#4286f4" secure="true"></FloatTextField>
@@ -43,7 +47,7 @@ You need to add ```bash FloatTextFieldModule ``` to your page module, and then s
 ```
 * #### Import FloatTextFieldModule in NgModule:
 
-```python
+```typescript
 //......
 import { FloatTextFieldModule } from "tns-material";
 
