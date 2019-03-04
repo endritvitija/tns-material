@@ -1,94 +1,79 @@
-import {
-  Component,
-  ViewChild,
-  ElementRef,
-  Input,
-  Output,
-  EventEmitter
-} from "@angular/core";
-import { Color } from "tns-core-modules/color/color";
-import { Page } from "ui/page";
+import { Component, ViewChild, ElementRef, Input, Output, EventEmitter } from '@angular/core';
+import { Color } from 'tns-core-modules/color/color';
 
 @Component({
-  selector: "FloatTextField",
-  moduleId: module.id,
-  templateUrl: "./float-text-field.component.html",
-  styleUrls: ["./float-text-field.component.css"]
+	selector: 'FloatTextField',
+	moduleId: module.id,
+	templateUrl: './float-text-field.component.html',
+	styleUrls: [ './float-text-field.component.scss' ]
 })
 export class FloatTextField {
-  private messageValue: string;
 
-  @Output()
-  messageChange = new EventEmitter<string>();
+	private messageValue: string;
 
-  @Input() get model() {
-    return this.messageValue;
-  }
+	@Output() messageChange = new EventEmitter<string>();
 
-  set model(val) {
-    this.messageValue = val;
-    this.messageChange.emit(this.messageValue);
-  }
+	@Input()
+	get model() {
+		return this.messageValue;
+	}
 
-  @Input() hint: string;
-  @Input() focusColor: string = "#4286f4";
-  @Input() noFocusColor: string = "#E8E8E8";
-  @Input() secure: boolean;
-  @Input() text: string;
-  @Input() keyboardType: string;
-  @Input() class: string;
-  @Input() style: string;
-  @Input() col: number;
-  @Input() row: number;
+	set model(val) {
+		this.messageValue = val;
+		this.messageChange.emit(this.messageValue);
+	}
 
-  @ViewChild("label") label: ElementRef;
-  @ViewChild("textField") textField: ElementRef;
+	@Input() hint: string;
+	@Input() focusColor: string = '#4286f4';
+	@Input() noFocusColor: string = '#E8E8E8';
+	@Input() secure: boolean;
+	@Input() text: string;
+	@Input() keyboardType: string;
+	@Input() class: string;
+	@Input() style: string;
+	@Input() col: number;
+	@Input() row: number;
 
-  constructor(private _page: Page) {}
 
-  ngOnInit(): void {
-    this.onBlur();
-  }
+	@ViewChild('label') label: ElementRef;
+	@ViewChild('textField') textField: ElementRef;
 
-  onFull() {
-    const textField = this.textField.nativeElement;
 
-    if (textField) {
-      this.onFocus();
-      this.onBlur();
-    } else {
-      this.onBlur();
-    }
-  }
+	constructor() {}
 
-  onFocus() {
-    const label = this.label.nativeElement;
-    const textField = this.textField.nativeElement;
+	ngOnInit(): void {
+		this.onBlur();
+	}
 
-    label
-      .animate({
-        translate: { x: 0, y: -20 },
-        opacity: 1
-      })
-      .then(() => {}, () => {});
+	onFocus() {
+		const label = this.label.nativeElement;
+		const textField = this.textField.nativeElement;
 
-    textField.borderColor = new Color(this.focusColor);
-    label.color = new Color(this.focusColor);
-  }
+		label
+			.animate({
+				translate: { x: 0, y: -20 },
+				opacity: 1
+			})
+			.then(() => {}, () => {});
 
-  onBlur() {
-    const label = this.label.nativeElement;
-    const textField = this.textField.nativeElement;
+		textField.borderColor = new Color(this.focusColor);
+		label.color = new Color(this.focusColor);
+	}
 
-    if (!textField.text) {
-      label
-        .animate({
-          translate: { x: 0, y: 0 },
-          opacity: 1
-        })
-        .then(() => {}, () => {});
-    }
-    textField.borderColor = new Color(this.noFocusColor);
-    label.color = new Color(this.noFocusColor);
-  }
+	onBlur() {
+		const label = this.label.nativeElement;
+		const textField = this.textField.nativeElement;
+
+		if (!textField.text) {
+			label
+				.animate({
+					translate: { x: 0, y: 0 },
+					opacity: 1
+				})
+				.then(() => {}, () => {});
+		}
+
+		textField.borderColor = new Color(this.noFocusColor);
+		label.color = new Color(this.noFocusColor);
+	}
 }

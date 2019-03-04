@@ -1,15 +1,5 @@
-<GridLayout rows="20,auto" columns="auto,*" [style]="style" [class]="class">
-  <Label #label row="1" col="0" [text]="hint" class="form-label"></Label>
-  <TextField
-    #textField
-    row="1"
-    colSpan="2"
-    [secure]="secure"
-    (focus)="onFocus()"
-    [ngModel]="model"
-    (ngModelChange)="model = $event"
-    [keyboardType]="keyboardType"
-    class="form-input"
-    (blur)="onBlur()"
-  ></TextField>
+<GridLayout rows="20,auto" columns="auto,*">
+    <Label #label row="1" col="0" [text]="hint" class="form-label"></Label>
+    <TextField #textField row="1" colSpan="2" [secure]="secure" (focus)="onFocus()" [ngModel]="model" (ngModelChange)="model= $event"
+        [keyboardType]="keyboardType" class="form-input" (blur)="onBlur()"></TextField>
 </GridLayout>

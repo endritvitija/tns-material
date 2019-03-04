@@ -1,6 +1,6 @@
 {
   "name": "tns-material",
-  "version": "1.1.0",
+  "version": "1.1.4",
   "description": "NativeScript Float Text Field ",
   "nativescript": {
     "platforms": {
@@ -15,7 +15,9 @@
   "keywords": [
     "npm",
     "tns-material",
-    "Material UI"
+    "Material UI",
+    "Nativescript",
+    "Angular"
   ],
   "author": "Endrit Vitija",
   "license": "MIT",
